@@ -51,7 +51,7 @@ struct ContentView: View {
                     .tag(TabViewItem.settings)
             }
         }
-        .accentColor(.türkis)
+        .accentColor(.tuerkis)
     }
 }
 
@@ -59,3 +59,4 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+

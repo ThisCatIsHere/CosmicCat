@@ -10,7 +10,6 @@ import SwiftUI
 struct DetailView: View {
     let feedItem: FeedItem
     @State private var isFavorite: Bool = false
-    
 
     var body: some View {
         GeometryReader { geometry in
@@ -19,7 +18,7 @@ struct DetailView: View {
                     VStack(alignment: .leading, spacing: 0) {
                         Spacer().frame(height: geometry.safeAreaInsets.top + 300)
                         
-                        // Der Inhalt, der hinter dem Bild verschwinden soll
+                        // Inhalt, der durch WebView ersetzt wird
                         VStack(alignment: .leading) {
                             HStack {
                                 Image("authorAvatar")
@@ -35,23 +34,23 @@ struct DetailView: View {
                                 
                                 Spacer()
                                 
-                                Text("12 hours ago")
+                                Text("12 Stunden her")
                                     .font(.subheadline)
                                     .foregroundColor(.secondary)
                             }
                             .padding([.horizontal, .top])
                             
-                            Text(feedItem.description)
-                                .padding()
+                            // WebView ersetzt die statische Textbeschreibung
+                            WebView(url: URL(string: "https://www.gamepro.de/artikel/assassins-creed-valhalla-meteoriten,3379100.html")!)
+                                .frame(height: 400)
                         }
                     }
-                    // Sorgt dafür, dass der Text auf weißem Hintergrund scrollt
                     .background(Color.white)
                 }
                 .edgesIgnoringSafeArea(.top)
                 
-                // Das Bild als Overlay, damit es beim Scrollen oben bleibt
-                Image(feedItem.imageName)
+                // Bild als Overlay
+                Image(feedItem.urlToImage)
                     .resizable()
                     .scaledToFill()
                     .frame(width: geometry.size.width, height: 300)
@@ -65,7 +64,7 @@ struct DetailView: View {
                                 .foregroundColor(.white)
                                 .padding()
                                 .frame(maxWidth: .infinity, alignment: .leading)
-                                .background(Color.black.opacity(0.3)) 
+                                .background(Color.black.opacity(0.3))
                         },
                         alignment: .bottomLeading
                     )
@@ -75,8 +74,6 @@ struct DetailView: View {
                     .background(Circle().fill(Color.white).shadow(radius: 4))
                     .offset(x: 150, y: 275)
                     .padding(.trailing)
-                
-                // Stellt sicher, dass der LoveItButton immer sichtbar ist
                     .zIndex(2)
             }
         }
@@ -92,7 +89,6 @@ struct DetailView: View {
 }
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        
         // Dummy-FeedItem für die Vorschau
         let dummyItem = FeedItem(
             title: "Neues DLC für Valhalla führt euch in Gletscherhöhlen",
@@ -101,7 +97,10 @@ struct DetailView_Previews: PreviewProvider {
             description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
         )
         
+        // Zeigt die DetailView mit dem dummyItem in der Vorschau an
         DetailView(feedItem: dummyItem)
     }
 }
+
+
 

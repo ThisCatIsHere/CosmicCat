@@ -20,7 +20,7 @@ struct PrimaryButton: View {
         }
         .frame(width: 200, height: 45)
         .background(LinearGradient(
-            gradient: Gradient(colors: [.pinky.opacity(0.75),.hellblau, .türkis]),
+            gradient: Gradient(colors: [.pinky.opacity(0.75),.hellblau, .tuerkis]),
             startPoint: .topLeading,
             endPoint: .bottomTrailing
         ))

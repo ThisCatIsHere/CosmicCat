@@ -13,12 +13,12 @@ struct FeedsOverview: View {
     var body: some View {
         NavigationStack{
             ZStack{
-                Image("background") // Setze den Namen deines Hintergrundbildes ein
+                Image("background") 
                     .resizable()
                     .ignoresSafeArea()
 
-                ScrollView(.vertical, showsIndicators: false) {
-                    VStack(alignment: .leading) {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack() {
                         ForEach(viewModel.feedItems) { item in
                             NavigationLink(destination: Text("Detailansicht für \(item.title)")) {
                                 FeedItemView(feedItem: item)
@@ -37,27 +37,10 @@ struct FeedItemView: View {
     let feedItem: FeedItem
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
-            Image(feedItem.imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .cornerRadius(10)
+        ScrollView(.horizontal){
+            NewsWindow(category: feedItem.category, imageName: feedItem.imageName,title: feedItem.title, description: feedItem.description)
             
-            Text(feedItem.title)
-                .font(.headline)
-            
-            Text(feedItem.category)
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-            
-            Text(feedItem.description)
-                .font(.body)
-                .foregroundColor(.secondary)
-                .lineLimit(3)
         }
-        .padding()
-        .background(Color.white.opacity(0.2))
-        .cornerRadius(12)
     }
 }
 
