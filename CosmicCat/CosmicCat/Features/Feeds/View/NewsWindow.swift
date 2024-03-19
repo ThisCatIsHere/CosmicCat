@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct NewsWindow: View {
-    var category = ""
-    var imageName = ""
+    
+    var imageName : URL? = nil
     var title = ""
     var description = ""
     
@@ -17,10 +17,14 @@ struct NewsWindow: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             VStack {
-                Image(imageName)
-                    .resizable()
-                    .frame(width: 300, height: 150)
-                    .aspectRatio(contentMode: .fit)
+                AsyncImage(url: imageName) { image in
+                        image.resizable()
+                        image.frame(width: 300, height: 150)
+                        image.aspectRatio(contentMode: .fit)
+                } placeholder: {
+                    ProgressView()
+                }
+                    
                 .cornerRadius(10)
             }
             .frame(maxWidth: .infinity)
@@ -29,11 +33,7 @@ struct NewsWindow: View {
                 .font(.headline)
                 .foregroundColor(.tuerkis)
             
-            Text(category)
-                .font(.subheadline)
-                .bold()
-                .foregroundColor(.white)
-            
+           
             Text(description)
                 .multilineTextAlignment(.leading)
                 .font(.body)

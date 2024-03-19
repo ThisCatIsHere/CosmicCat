@@ -8,14 +8,19 @@
 import Foundation
 
 class FeedViewModel: ObservableObject {
-    @Published var feedItems: [FeedItem] = []
+    @Published var feedItems: [Article] = []
     
-    init() {
-        // Dummy-Daten 
-        feedItems = [
-            FeedItem(title: "Neues DLC für Valhalla führt euch in Gletscherhöhlen", imageName: "valhalla", category: "Abenteuer", description: "Entdecke die tiefen Gletscherhöhlen im neuesten DLC von Valhalla..."),
-            FeedItem(title: "Neues DLC für Valhalla führt euch in Gletscherhöhlen", imageName: "valhalla", category: "Abenteuer", description: "Entdecke die tiefen Gletscherhöhlen im neuesten DLC von Valhalla...")
-            ]
-       }
+    private var apiRepo = ApiNewsRepository()
+    
+    @MainActor
+    func load() {
+        Task {
+            do {
+                self.feedItems = try await self.apiRepo.fetchNews(searchText: "gaming")
+            } catch {
+                print(error)
+            }
+        }
+    }
 }
 

@@ -17,17 +17,19 @@
 
 import Foundation
 
-// Definition der Struktur `NewsResponse`, die die Antwort der News-API repräsentiert.
+
 // Diese Struktur implementiert das `Codable` Protokoll, um die Konvertierung zwischen JSON und dieser Struktur zu ermöglichen.
 struct FeedItem: Codable {
-    let status: String         // Der Status der Antwort, z.B. "ok" für eine erfolgreiche Anfrage.
-    let totalResults: Int      // Die Gesamtzahl der Ergebnisse, die der Suchanfrage entsprechen.
+    
+    
     let articles: [Article]    // Ein Array von `Article`-Strukturen, die die einzelnen Nachrichtenartikel darstellen.
 }
 
 // Definition der Struktur `Article`, die einen einzelnen Nachrichtenartikel repräsentiert.
 // Auch diese Struktur implementiert das `Codable` Protokoll.
 struct Article: Codable {
+    let id = UUID()
+    
     let source: Source         // Die Quelle des Artikels, repräsentiert durch eine `Source`-Struktur.
     let author: String?        // Der Autor des Artikels. Optional, da nicht alle Artikel einen Autor haben müssen.
     let title: String          // Der Titel des Artikels.

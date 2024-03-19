@@ -19,14 +19,16 @@ struct FeedsOverview: View {
 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack() {
-                        ForEach(viewModel.feedItems) { item in
-                            NavigationLink(destination: Text("Detailansicht für \(item.title)")) {
+                        ForEach(viewModel.feedItems, id: \.title) { item in
+                            NavigationLink(destination: DetailView(article: item)) {
                                 FeedItemView(feedItem: item)
                             }
+
                         }
                     }
                     .padding()
                 }
+                .onAppear(perform: viewModel.load)
                 .frame(maxWidth: .infinity)
             }
         }
@@ -34,11 +36,11 @@ struct FeedsOverview: View {
 }
 
 struct FeedItemView: View {
-    let feedItem: FeedItem
+    let feedItem: Article
 
     var body: some View {
         ScrollView(.horizontal){
-            NewsWindow(category: feedItem.category, imageName: feedItem.imageName,title: feedItem.title, description: feedItem.description)
+            NewsWindow(imageName: feedItem.urlToImage,title: feedItem.title, description: feedItem.description ?? "empty description")
             
         }
     }

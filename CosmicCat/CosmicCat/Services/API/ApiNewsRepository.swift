@@ -8,7 +8,7 @@
 import Foundation
 
 // Definition der NewsRepository-Klasse, die für das Abrufen von Nachrichtenartikeln aus einer API verantwortlich ist.
-class NewsRepository {
+class ApiNewsRepository {
     
     // Definition eines benutzerdefinierten Fehlers für den Fall, dass eine ungültige URL erstellt wird.
     struct InvalidURLError: Error {}
@@ -21,7 +21,10 @@ class NewsRepository {
         
         // Erstellung der URL mit dem übergebenen Suchtext und dem API-Schlüssel.
         // Falls die URL nicht korrekt erstellt werden kann, wird ein `InvalidURLError` geworfen.
-        guard let url = URL(string:"https://newsapi.org/v2/everything?q=\(searchText)&from=2024-01-09&sortBy=publishedAt&apiKey=\(APIKey)") else {
+        guard let url = URL(string:"https://newsapi.org/v2/everything?q=gaming&sortBy=publishedAt&apiKey=\(APIKey)") else {
+            
+            
+           
             throw InvalidURLError()
         }
         
@@ -32,8 +35,15 @@ class NewsRepository {
         // Dekodierung der erhaltenen Daten in eine Instanz von `NewsResponse` mithilfe von `JSONDecoder`.
         // Dies könnte ebenfalls Fehler werfen, falls die Daten nicht dem erwarteten Format entsprechen.
         let newsResult = try JSONDecoder().decode(FeedItem.self, from: data)
-        
+        print("Repo",newsResult.articles)
         // Rückgabe der Artikel aus dem dekodierten `NewsResponse` Objekt.
+        
+//        var articles: [Article] = []
+//        for oneArticle in newsResult.articles {
+//            if let unwrappedArticle = oneArticle {
+//                articles.append(unwrappedArticle)
+//            }
+//        }
         return newsResult.articles
     }
 }
