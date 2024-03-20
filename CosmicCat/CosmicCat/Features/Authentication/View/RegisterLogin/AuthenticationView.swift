@@ -62,7 +62,7 @@ struct AuthenticationView: View {
     
     // MARK: - Variables
     
-    @EnvironmentObject private var userViewModel: UserViewModel
+    @EnvironmentObject private var userViewModel: AuthenticationViewModel
     
     @State private var mode: AuthenticationMode = .login
     @State private var name = ""

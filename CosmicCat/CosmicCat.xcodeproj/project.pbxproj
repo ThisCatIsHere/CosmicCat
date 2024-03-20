@@ -12,7 +12,6 @@
 		B26EB17A2B9116230043DA38 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26EB1792B9116230043DA38 /* ContentView.swift */; };
 		B26EB17C2B9116240043DA38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26EB17B2B9116240043DA38 /* Assets.xcassets */; };
 		B26EB17F2B9116240043DA38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26EB17E2B9116240043DA38 /* Preview Assets.xcassets */; };
-		B27B58E22BAB099300C6EB69 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27B58E12BAB099300C6EB69 /* RegisterViewModel.swift */; };
 		B2C4D15F2B9DFE6800AE7DBF /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4D15E2B9DFE6800AE7DBF /* FireBaseManager.swift */; };
 		B2C4D1612B9DFF3900AE7DBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2C4D1602B9DFF3900AE7DBF /* GoogleService-Info.plist */; };
 		B2C4D1642B9E001600AE7DBF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B2C4D1632B9E001600AE7DBF /* FirebaseAnalytics */; };
@@ -44,9 +43,9 @@
 		B2C4D1982B9E001600AE7DBF /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = B2C4D1972B9E001600AE7DBF /* FirebaseStorageCombine-Community */; };
 		B2C4D19E2B9E03C300AE7DBF /* FeedsOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4D19D2B9E03C300AE7DBF /* FeedsOverview.swift */; };
 		B2C4D1A12B9E048A00AE7DBF /* TabViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4D1A02B9E048A00AE7DBF /* TabViewItem.swift */; };
-		B2FEE7612B9F757A009EA0E3 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE7602B9F757A009EA0E3 /* RegisterView.swift */; };
+		B2FEE7612B9F757A009EA0E3 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE7602B9F757A009EA0E3 /* AuthenticationView.swift */; };
 		B2FEE7692B9F79C3009EA0E3 /* FireUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE7682B9F79C3009EA0E3 /* FireUser.swift */; };
-		B2FEE7702B9F7B9A009EA0E3 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE76F2B9F7B9A009EA0E3 /* UserViewModel.swift */; };
+		B2FEE7702B9F7B9A009EA0E3 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE76F2B9F7B9A009EA0E3 /* AuthenticationViewModel.swift */; };
 		B2FEE7752B9F7D2D009EA0E3 /* FireNewsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE7742B9F7D2D009EA0E3 /* FireNewsFeed.swift */; };
 		B2FEE7772B9F7DA0009EA0E3 /* NewsFeedListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE7762B9F7DA0009EA0E3 /* NewsFeedListViewModel.swift */; };
 		B2FEE77A2B9F7F36009EA0E3 /* AuthenticationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE7792B9F7F36009EA0E3 /* AuthenticationMode.swift */; };
@@ -72,14 +71,13 @@
 		B26EB1792B9116230043DA38 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B26EB17B2B9116240043DA38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B26EB17E2B9116240043DA38 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		B27B58E12BAB099300C6EB69 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		B2C4D15E2B9DFE6800AE7DBF /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
 		B2C4D1602B9DFF3900AE7DBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B2C4D19D2B9E03C300AE7DBF /* FeedsOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsOverview.swift; sourceTree = "<group>"; };
 		B2C4D1A02B9E048A00AE7DBF /* TabViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewItem.swift; sourceTree = "<group>"; };
-		B2FEE7602B9F757A009EA0E3 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		B2FEE7602B9F757A009EA0E3 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		B2FEE7682B9F79C3009EA0E3 /* FireUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireUser.swift; sourceTree = "<group>"; };
-		B2FEE76F2B9F7B9A009EA0E3 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		B2FEE76F2B9F7B9A009EA0E3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		B2FEE7742B9F7D2D009EA0E3 /* FireNewsFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireNewsFeed.swift; sourceTree = "<group>"; };
 		B2FEE7762B9F7DA0009EA0E3 /* NewsFeedListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedListViewModel.swift; sourceTree = "<group>"; };
 		B2FEE7792B9F7F36009EA0E3 /* AuthenticationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationMode.swift; sourceTree = "<group>"; };
@@ -220,9 +218,8 @@
 		B2C4D1572B9DF99500AE7DBF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B2FEE76F2B9F7B9A009EA0E3 /* UserViewModel.swift */,
+				B2FEE76F2B9F7B9A009EA0E3 /* AuthenticationViewModel.swift */,
 				B2FEE7762B9F7DA0009EA0E3 /* NewsFeedListViewModel.swift */,
-				B27B58E12BAB099300C6EB69 /* RegisterViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -240,7 +237,6 @@
 			isa = PBXGroup;
 			children = (
 				B2FEE7682B9F79C3009EA0E3 /* FireUser.swift */,
-				B2FEE7742B9F7D2D009EA0E3 /* FireNewsFeed.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -248,7 +244,7 @@
 		B2C4D15B2B9DFA4900AE7DBF /* RegisterLogin */ = {
 			isa = PBXGroup;
 			children = (
-				B2FEE7602B9F757A009EA0E3 /* RegisterView.swift */,
+				B2FEE7602B9F757A009EA0E3 /* AuthenticationView.swift */,
 			);
 			path = RegisterLogin;
 			sourceTree = "<group>";
@@ -272,6 +268,7 @@
 		B2C4D1992B9E037200AE7DBF /* Feeds */ = {
 			isa = PBXGroup;
 			children = (
+				B2FEE7742B9F7D2D009EA0E3 /* FireNewsFeed.swift */,
 				B2C4D19C2B9E03A900AE7DBF /* Model */,
 				B2C4D19B2B9E03A100AE7DBF /* View */,
 				B2C4D19A2B9E038F00AE7DBF /* ViewModel */,
@@ -575,7 +572,7 @@
 			files = (
 				B2FEE7952BA0E2E5009EA0E3 /* FeedViewModel.swift in Sources */,
 				B2FEE7AC2BA4EBA5009EA0E3 /* ApiNewsRepository.swift in Sources */,
-				B2FEE7702B9F7B9A009EA0E3 /* UserViewModel.swift in Sources */,
+				B2FEE7702B9F7B9A009EA0E3 /* AuthenticationViewModel.swift in Sources */,
 				B2C4D19E2B9E03C300AE7DBF /* FeedsOverview.swift in Sources */,
 				B2FEE79D2BA0EAE2009EA0E3 /* LoveItButton.swift in Sources */,
 				B2FEE77F2B9F80A7009EA0E3 /* TextButton.swift in Sources */,
@@ -586,13 +583,12 @@
 				B26EB1782B9116230043DA38 /* CosmicCatApp.swift in Sources */,
 				B2FEE77D2B9F8041009EA0E3 /* PrimaryButton.swift in Sources */,
 				B2FEE78B2B9F848B009EA0E3 /* ProfileView.swift in Sources */,
-				B2FEE7612B9F757A009EA0E3 /* RegisterView.swift in Sources */,
+				B2FEE7612B9F757A009EA0E3 /* AuthenticationView.swift in Sources */,
 				B2FEE7752B9F7D2D009EA0E3 /* FireNewsFeed.swift in Sources */,
 				B2FEE79B2BA0E813009EA0E3 /* DetailView.swift in Sources */,
 				B2C4D15F2B9DFE6800AE7DBF /* FireBaseManager.swift in Sources */,
 				B2FEE79F2BA21B81009EA0E3 /* NewsWindow.swift in Sources */,
 				B2FEE7772B9F7DA0009EA0E3 /* NewsFeedListViewModel.swift in Sources */,
-				B27B58E22BAB099300C6EB69 /* RegisterViewModel.swift in Sources */,
 				B2FEE7932BA0D61D009EA0E3 /* GameFeedNews.swift in Sources */,
 				B2FEE7692B9F79C3009EA0E3 /* FireUser.swift in Sources */,
 				B2FEE77A2B9F7F36009EA0E3 /* AuthenticationMode.swift in Sources */,

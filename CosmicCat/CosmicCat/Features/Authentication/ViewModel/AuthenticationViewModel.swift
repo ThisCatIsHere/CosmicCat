@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseAuth
 
-class UserViewModel: ObservableObject {
+class AuthenticationViewModel: ObservableObject {
     
     init() {
         checkAuth()
@@ -114,7 +114,7 @@ class UserViewModel: ObservableObject {
 
 // MARK: Data
 
-extension UserViewModel {
+extension AuthenticationViewModel {
     
     /**
      Erstellen eines User-Dokuments im Firestore.
