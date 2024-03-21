@@ -11,6 +11,9 @@ import Firebase
 @main
 struct CosmicCatApp: App {
     
+    @StateObject var authenticationViewModel = AuthenticationViewModel()
+    
+    
     init() {
         FirebaseConfiguration.shared.setLoggerLevel(.min)
         FirebaseApp.configure()
@@ -18,7 +21,13 @@ struct CosmicCatApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if authenticationViewModel.userIsLoggedIn {
+                HomeView()
+                    .environmentObject(authenticationViewModel)
+            } else {
+                AuthenticationView()
+                    .environmentObject(authenticationViewModel)
+            }
         }
     }
 }

@@ -27,7 +27,7 @@ struct FeedItem: Codable {
 
 // Definition der Struktur `Article`, die einen einzelnen Nachrichtenartikel repräsentiert.
 // Auch diese Struktur implementiert das `Codable` Protokoll.
-struct Article: Codable {
+struct Article: Codable, Identifiable {
     let id = UUID()
     
     let source: Source         // Die Quelle des Artikels, repräsentiert durch eine `Source`-Struktur.

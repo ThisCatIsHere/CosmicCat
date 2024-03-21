@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     @State var selectedTab: TabViewItem = .feedsOverview
     
     init() {
@@ -57,6 +57,6 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView()
+    HomeView()
 }
 

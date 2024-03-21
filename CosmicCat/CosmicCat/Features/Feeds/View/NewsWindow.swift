@@ -45,7 +45,6 @@ struct NewsWindow: View {
         .background(Color.white.opacity(0.2))
         .cornerRadius(12)
     }
-    
 }
 
 #Preview {

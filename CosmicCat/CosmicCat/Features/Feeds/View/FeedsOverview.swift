@@ -19,7 +19,7 @@ struct FeedsOverview: View {
 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack() {
-                        ForEach(viewModel.feedItems, id: \.title) { item in
+                        ForEach(viewModel.feedItems) { item in
                             NavigationLink(destination: DetailView(article: item)) {
                                 FeedItemView(feedItem: item)
                             }

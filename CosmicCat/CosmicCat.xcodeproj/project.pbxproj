@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		B205B4AB2B91179F00399685 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B205B4AA2B91179F00399685 /* README.md */; };
 		B26EB1782B9116230043DA38 /* CosmicCatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26EB1772B9116230043DA38 /* CosmicCatApp.swift */; };
-		B26EB17A2B9116230043DA38 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26EB1792B9116230043DA38 /* ContentView.swift */; };
+		B26EB17A2B9116230043DA38 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26EB1792B9116230043DA38 /* HomeView.swift */; };
 		B26EB17C2B9116240043DA38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26EB17B2B9116240043DA38 /* Assets.xcassets */; };
 		B26EB17F2B9116240043DA38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26EB17E2B9116240043DA38 /* Preview Assets.xcassets */; };
 		B2C4D15F2B9DFE6800AE7DBF /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4D15E2B9DFE6800AE7DBF /* FireBaseManager.swift */; };
@@ -68,7 +68,7 @@
 		B205B4AA2B91179F00399685 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B26EB1742B9116230043DA38 /* CosmicCat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CosmicCat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B26EB1772B9116230043DA38 /* CosmicCatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmicCatApp.swift; sourceTree = "<group>"; };
-		B26EB1792B9116230043DA38 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B26EB1792B9116230043DA38 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B26EB17B2B9116240043DA38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B26EB17E2B9116240043DA38 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B2C4D15E2B9DFE6800AE7DBF /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 				B2C4D1542B9DF93800AE7DBF /* Services */,
 				B2C4D1552B9DF94100AE7DBF /* Utilities */,
 				B26EB17B2B9116240043DA38 /* Assets.xcassets */,
-				B26EB1792B9116230043DA38 /* ContentView.swift */,
+				B26EB1792B9116230043DA38 /* HomeView.swift */,
 				B26EB1772B9116230043DA38 /* CosmicCatApp.swift */,
 				B2C4D1602B9DFF3900AE7DBF /* GoogleService-Info.plist */,
 				B26EB17D2B9116240043DA38 /* Preview Content */,
@@ -576,7 +576,7 @@
 				B2C4D19E2B9E03C300AE7DBF /* FeedsOverview.swift in Sources */,
 				B2FEE79D2BA0EAE2009EA0E3 /* LoveItButton.swift in Sources */,
 				B2FEE77F2B9F80A7009EA0E3 /* TextButton.swift in Sources */,
-				B26EB17A2B9116230043DA38 /* ContentView.swift in Sources */,
+				B26EB17A2B9116230043DA38 /* HomeView.swift in Sources */,
 				B2FEE7912B9F84DA009EA0E3 /* SettingsView.swift in Sources */,
 				B2FEE7852B9F8417009EA0E3 /* FavoritesView.swift in Sources */,
 				B2FEE7A42BA37970009EA0E3 /* WebView.swift in Sources */,
