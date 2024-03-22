@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SettingsView: View {
+struct InterestsView: View {
     var body: some View {
         NavigationStack{
             
@@ -17,7 +17,7 @@ struct SettingsView: View {
                     .resizable()
                 
                 
-                Text("Einstellungen")
+                Text("Interessen")
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .fontWeight(.thin)
                     .foregroundColor(.white)
@@ -34,5 +34,5 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView()
+    InterestsView()
 }

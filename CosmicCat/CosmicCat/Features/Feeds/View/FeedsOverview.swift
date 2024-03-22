@@ -9,46 +9,64 @@ import SwiftUI
 
 struct FeedsOverview: View {
     @StateObject var viewModel = FeedViewModel()
-
+    @State private var sheet: Sheet?
+    
+    init() {
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+    }
+    
     var body: some View {
         NavigationStack{
             ZStack{
-                Image("background") 
+                Image("background")
                     .resizable()
                     .ignoresSafeArea()
-
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack() {
-                        ForEach(viewModel.feedItems) { item in
-                            NavigationLink(destination: DetailView(article: item)) {
-                                FeedItemView(feedItem: item)
+                
+                
+                VStack {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack() {
+                            ForEach(viewModel.feedItems) { item in
+                                NavigationLink(destination: DetailView(article: item)) {
+                                    FeedItemView(feedItem: item)
+                                }
                             }
-
                         }
+                        .padding()
                     }
-                    .padding()
+                    .onAppear(perform: viewModel.load)
+                    .frame(maxWidth: .infinity)
+                    
                 }
-                .onAppear(perform: viewModel.load)
-                .frame(maxWidth: .infinity)
+                Spacer()
+            }
+            .navigationTitle("Deine Game News")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                Button {
+                    sheet = .settings
+                } label: {
+                    Image(systemName: "gearshape.fill")
+                }
+            }
+            .sheet(item: $sheet) { item in
+                // Entscheide hier basierend auf dem Wert von 'item', welches Sheet angezeigt werden soll
+                switch item {
+                case .create:
+                    // Hier die View für 'create' zurückgeben
+                    Text("Create Sheet")
+                case .settings:
+                    SettingsView(sheet: $sheet)
+                }
             }
         }
     }
-}
-
-struct FeedItemView: View {
-    let feedItem: Article
-
-    var body: some View {
-        ScrollView(.horizontal){
-            NewsWindow(imageName: feedItem.urlToImage,title: feedItem.title, description: feedItem.description ?? "empty description")
-            
+    
+    
+    // Dein Preview-Provider
+    struct FeedsOverview_Previews: PreviewProvider {
+        static var previews: some View {
+            FeedsOverview()
         }
-    }
-}
-
-// Dein Preview-Provider
-struct FeedsOverview_Previews: PreviewProvider {
-    static var previews: some View {
-        FeedsOverview()
     }
 }

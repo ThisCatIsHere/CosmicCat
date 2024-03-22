@@ -17,7 +17,7 @@ struct FavoritesView: View {
                     .resizable()
                 
                 
-                Text("Favoriten")
+                Text("Leseliste")
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .fontWeight(.thin)
                     .foregroundColor(.white)

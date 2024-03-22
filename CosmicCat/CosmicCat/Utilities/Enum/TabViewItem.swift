@@ -9,7 +9,7 @@ import Foundation
 
 enum TabViewItem:String, Codable {
     case feedsOverview = "News"
-    case favorites = "Favoriten"
+    case favorites = "Leseliste"
     case profile = "Profil"
-    case settings = "Einstellungen"
+    case interests = "Interessen"
 }
