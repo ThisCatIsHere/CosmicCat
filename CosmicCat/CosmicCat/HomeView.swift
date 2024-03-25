@@ -29,7 +29,7 @@ struct HomeView: View {
                     }
                     .tag(TabViewItem.feedsOverview)
                 
-                FavoritesView()
+                ReadingListView()
                     .tabItem {
                         Image(systemName: "heart")
                         Text(TabViewItem.favorites.rawValue)

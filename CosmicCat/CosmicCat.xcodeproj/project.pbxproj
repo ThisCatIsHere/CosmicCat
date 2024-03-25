@@ -54,7 +54,7 @@
 		B2FEE77A2B9F7F36009EA0E3 /* AuthenticationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE7792B9F7F36009EA0E3 /* AuthenticationMode.swift */; };
 		B2FEE77D2B9F8041009EA0E3 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE77C2B9F8041009EA0E3 /* PrimaryButton.swift */; };
 		B2FEE77F2B9F80A7009EA0E3 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE77E2B9F80A7009EA0E3 /* TextButton.swift */; };
-		B2FEE7852B9F8417009EA0E3 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE7842B9F8417009EA0E3 /* FavoritesView.swift */; };
+		B2FEE7852B9F8417009EA0E3 /* ReadingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE7842B9F8417009EA0E3 /* ReadingListView.swift */; };
 		B2FEE78B2B9F848B009EA0E3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE78A2B9F848B009EA0E3 /* ProfileView.swift */; };
 		B2FEE7912B9F84DA009EA0E3 /* InterestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE7902B9F84DA009EA0E3 /* InterestsView.swift */; };
 		B2FEE7932BA0D61D009EA0E3 /* GameFeedNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE7922BA0D61D009EA0E3 /* GameFeedNews.swift */; };
@@ -89,7 +89,7 @@
 		B2FEE7792B9F7F36009EA0E3 /* AuthenticationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationMode.swift; sourceTree = "<group>"; };
 		B2FEE77C2B9F8041009EA0E3 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		B2FEE77E2B9F80A7009EA0E3 /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
-		B2FEE7842B9F8417009EA0E3 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		B2FEE7842B9F8417009EA0E3 /* ReadingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListView.swift; sourceTree = "<group>"; };
 		B2FEE78A2B9F848B009EA0E3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		B2FEE7902B9F84DA009EA0E3 /* InterestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsView.swift; sourceTree = "<group>"; };
 		B2FEE7922BA0D61D009EA0E3 /* GameFeedNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFeedNews.swift; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 				B2AFE2C12BAE244F002CBA29 /* Settings */,
 				B2FEE7962BA0E7D2009EA0E3 /* Detail */,
 				B2C4D1992B9E037200AE7DBF /* Feeds */,
-				B2FEE7802B9F83CE009EA0E3 /* Favorites */,
+				B2FEE7802B9F83CE009EA0E3 /* Readinglist */,
 				B2FEE7862B9F8468009EA0E3 /* Profile */,
 				B2FEE78C2B9F84A9009EA0E3 /* Interests */,
 				B2C4D1562B9DF98600AE7DBF /* Authentication */,
@@ -352,14 +352,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
-		B2FEE7802B9F83CE009EA0E3 /* Favorites */ = {
+		B2FEE7802B9F83CE009EA0E3 /* Readinglist */ = {
 			isa = PBXGroup;
 			children = (
 				B2FEE7832B9F83FC009EA0E3 /* Model */,
 				B2FEE7822B9F83F5009EA0E3 /* View */,
 				B2FEE7812B9F83E9009EA0E3 /* ViewModel */,
 			);
-			path = Favorites;
+			path = Readinglist;
 			sourceTree = "<group>";
 		};
 		B2FEE7812B9F83E9009EA0E3 /* ViewModel */ = {
@@ -372,7 +372,7 @@
 		B2FEE7822B9F83F5009EA0E3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B2FEE7842B9F8417009EA0E3 /* FavoritesView.swift */,
+				B2FEE7842B9F8417009EA0E3 /* ReadingListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -603,7 +603,7 @@
 				B2FEE77F2B9F80A7009EA0E3 /* TextButton.swift in Sources */,
 				B26EB17A2B9116230043DA38 /* HomeView.swift in Sources */,
 				B2FEE7912B9F84DA009EA0E3 /* InterestsView.swift in Sources */,
-				B2FEE7852B9F8417009EA0E3 /* FavoritesView.swift in Sources */,
+				B2FEE7852B9F8417009EA0E3 /* ReadingListView.swift in Sources */,
 				B2FEE7A42BA37970009EA0E3 /* WebView.swift in Sources */,
 				B2AFE2C02BADCB5E002CBA29 /* FeedItemView.swift in Sources */,
 				B26EB1782B9116230043DA38 /* CosmicCatApp.swift in Sources */,

@@ -116,7 +116,9 @@ struct DetailView: View {
                             .padding([.horizontal, .top])
                             
                             Text(article.description ?? "Keine Beschreibung verfügbar.")
+                                
                                 .padding()
+                                
                         }
                     }
                     // Sorgt dafür, dass der Text auf weißem Hintergrund scrollt

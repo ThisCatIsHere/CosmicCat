@@ -12,6 +12,7 @@ import Firebase
 struct CosmicCatApp: App {
     
     @StateObject var authenticationViewModel = AuthenticationViewModel()
+    @StateObject var newsFeedListViewModel = NewsFeedListViewModel()
     
     
     init() {
@@ -24,6 +25,7 @@ struct CosmicCatApp: App {
             if authenticationViewModel.userIsLoggedIn {
                 HomeView()
                     .environmentObject(authenticationViewModel)
+                    .environmentObject(newsFeedListViewModel)
             } else {
                 AuthenticationView()
                     .environmentObject(authenticationViewModel)

@@ -9,11 +9,12 @@ import SwiftUI
 
 struct FeedItemView: View {
     let feedItem: Article
+    
+    let exampleArticle = FireNewsFeed(userId: "", title: "", description: "")
 
     var body: some View {
         ScrollView(.horizontal){
-            NewsWindow(imageName: feedItem.urlToImage,title: feedItem.title, description: feedItem.description ?? "empty description")
-            
+            NewsWindow(imageName: feedItem.urlToImage,title: feedItem.title, description: feedItem.description ?? "empty description", article: exampleArticle)
         }
     }
 }
