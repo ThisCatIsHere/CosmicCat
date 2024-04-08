@@ -11,7 +11,18 @@ import FirebaseFirestoreSwift
 struct FireNewsFeed: Codable, Identifiable {
     @DocumentID var id: String?
     
-    var userId: String?
+   
     var title: String
     var description: String
+    
+  
+}
+
+extension FireNewsFeed {
+    func toDictionary () -> [String: Any] {
+        var dict = [String: Any]()
+        dict ["title"] = title
+        dict ["description"] = description
+        return dict
+    }
 }

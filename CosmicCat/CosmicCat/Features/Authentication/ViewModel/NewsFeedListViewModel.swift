@@ -26,22 +26,15 @@ class NewsFeedListViewModel: ObservableObject {
             return
         }
         let articleRef = db.collection("users").document(userId).collection("articles").document()
-        articleRef.setData(article.toDictionary()) { error in
-            if let error = error {
-                print("Error adding article: \(error)")
-            } else {
-                print("Article successfully added with ID: \(articleRef.documentID)")
-            }
+        do { print(article)
+            try articleRef.setData(from: article)
+            print("Article successfully added with ID: \(articleRef.documentID)")
+            
+        } catch {
+            print("Error adding article: \(error)")
         }
     }
 }
 
-extension FireNewsFeed {
-    func toDictionary () -> [String: Any] {
-        var dict = [String: Any]()
-        dict ["userId"] = userId
-        dict ["title"] = title
-        dict ["description"] = description
-        return dict
-    }
-}
+
+

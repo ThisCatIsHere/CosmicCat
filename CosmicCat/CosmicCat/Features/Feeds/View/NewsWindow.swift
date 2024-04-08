@@ -16,8 +16,8 @@ struct NewsWindow: View {
     var description = ""
     
     @State var isLiked = false
-//    let article: Article
-    var article: FireNewsFeed
+    let article: Article
+    var artikel: FireNewsFeed
     @EnvironmentObject var viewModel: NewsFeedListViewModel
     
     
@@ -33,7 +33,8 @@ struct NewsWindow: View {
                             Button(action: {
                                 isLiked.toggle()
                                 if isLiked {
-                                    viewModel.saveArticle(article)
+                                    viewModel.saveArticle(article.toFireNewsFeed())
+                                    
                                 }
                                 
                             }) {
@@ -69,7 +70,6 @@ struct NewsWindow: View {
                 VStack{
                     
                     Text(article.title)
-                        .font(.title)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .padding()
@@ -82,10 +82,12 @@ struct NewsWindow: View {
                     
                 }
                 .frame(maxWidth: .infinity, maxHeight: 150)
-                .background(.green)
+                .background(Color.white.opacity(0.5))
+                .foregroundColor(.black)
+                                        
             }
             .frame(width: 300, height: 350)
-            .background(.red)
+            .background(Color.black.opacity(0.3))
             .clipShape(
                 .rect(
                     topLeadingRadius: 20.0,
@@ -145,9 +147,9 @@ struct NewsWindow: View {
         //        .cornerRadius(12)
     }
 }
-#Preview {
-    NewsWindow(article: FireNewsFeed(title: "Test", description: "Hier könnte Text stehen"))
-}
+//#Preview {
+//    NewsWindow(artikel: FireNewsFeed(title: "Test", description: "Hier könnte Text stehen"), article: Article)
+////}
 
 //struct NewsWindow_Previews: PreviewProvider {
 //    static var previews: some View {

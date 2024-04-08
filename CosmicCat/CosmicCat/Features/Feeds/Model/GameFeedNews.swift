@@ -35,6 +35,11 @@ struct Article: Codable, Identifiable {
     let title: String          // Der Titel des Artikels.
     let description: String?   // Eine kurze Beschreibung oder Einleitung des Artikels. Optional, da nicht alle Artikel eine Beschreibung haben.
     let urlToImage: URL?       // Eine URL zu einem Bild, das den Artikel begleitet. Optional, da nicht alle Artikel Bilder haben.
+    
+    func toFireNewsFeed() -> FireNewsFeed {
+        
+        return FireNewsFeed(title: title, description: description ?? "Description not found")
+    }
 }
 
 // Definition der Struktur `Source`, die die Quelle eines Nachrichtenartikels repräsentiert.
