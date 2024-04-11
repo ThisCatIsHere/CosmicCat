@@ -43,12 +43,12 @@ struct HomeView: View {
                     }
                     .tag(TabViewItem.profile)
                 
-                InterestsView()
+                WriteView()
                     .tabItem {
-                        Image(systemName: "gamecontroller")
-                        Text(TabViewItem.interests.rawValue)
+                        Image(systemName: "pencil")
+                        Text(TabViewItem.write.rawValue)
                     }
-                    .tag(TabViewItem.interests)
+                    .tag(TabViewItem.write)
             }
         }
         .accentColor(.tuerkis)

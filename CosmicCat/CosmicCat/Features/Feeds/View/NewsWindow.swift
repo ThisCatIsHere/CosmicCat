@@ -17,7 +17,7 @@ struct NewsWindow: View {
     
     @State var isLiked = false
     let article: Article
-    var artikel: FireNewsFeed
+    
     @EnvironmentObject var viewModel: NewsFeedListViewModel
     
     
@@ -69,7 +69,7 @@ struct NewsWindow: View {
                 
                 VStack{
                     
-                    Text(article.title)
+                    Text(article.title ?? "No title found")
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .padding()

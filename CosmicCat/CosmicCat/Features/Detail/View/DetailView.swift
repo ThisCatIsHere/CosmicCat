@@ -138,7 +138,7 @@ struct DetailView: View {
                                    .overlay(
                                        VStack {
                                            Spacer()
-                                           Text(article.title)
+                                          Text(article.title ?? "No title found")
                                                .font(.title)
                                                .fontWeight(.bold)
                                                .foregroundColor(.white)
@@ -159,13 +159,14 @@ struct DetailView: View {
                            }
                        }
                        .edgesIgnoringSafeArea(.top)
-                       .navigationBarBackButtonHidden(false)
+//
                        .navigationBarTitle(Text("Detail"), displayMode: .inline)
-                       .navigationBarItems(leading: Button(action: {}) {
-                           Image(systemName: "chevron.left")
-                       }, trailing: Button(action: {}) {
-                           Image(systemName: "ellipsis.circle")
-                       })
+//                       .navigationBarItems(leading: Button(action: {}) {
+//                           Image(systemName: "chevron.left")
+//                       }, trailing: Button(action: {}) {
+//                           Image(systemName: "ellipsis.circle")
+//                       })
+//                       .navigationBarBackButtonHidden(true)
                    }
                }
 

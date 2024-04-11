@@ -30,15 +30,16 @@ struct FeedItem: Codable {
 struct Article: Codable, Identifiable {
     let id = UUID()
     
-    let source: Source         // Die Quelle des Artikels, repräsentiert durch eine `Source`-Struktur.
+    let source: Source?         // Die Quelle des Artikels, repräsentiert durch eine `Source`-Struktur.
     let author: String?        // Der Autor des Artikels. Optional, da nicht alle Artikel einen Autor haben müssen.
-    let title: String          // Der Titel des Artikels.
+    let title: String?          // Der Titel des Artikels.
     let description: String?   // Eine kurze Beschreibung oder Einleitung des Artikels. Optional, da nicht alle Artikel eine Beschreibung haben.
     let urlToImage: URL?       // Eine URL zu einem Bild, das den Artikel begleitet. Optional, da nicht alle Artikel Bilder haben.
     
     func toFireNewsFeed() -> FireNewsFeed {
         
-        return FireNewsFeed(title: title, description: description ?? "Description not found")
+                
+        return FireNewsFeed(author: author ?? "Author not found", title: title ?? "Title not found", description: description ?? "Description not found", urlToImage: urlToImage! )
     }
 }
 

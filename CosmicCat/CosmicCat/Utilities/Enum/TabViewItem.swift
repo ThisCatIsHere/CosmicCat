@@ -11,5 +11,5 @@ enum TabViewItem:String, Codable {
     case feedsOverview = "News"
     case favorites = "Leseliste"
     case profile = "Profil"
-    case interests = "Interessen"
+    case write = "Schreiben"
 }

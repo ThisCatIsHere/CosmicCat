@@ -1,13 +1,13 @@
 //
-//  SettingsView.swift
+//  WriteView.swift
 //  CosmicCat
 //
-//  Created by Sarah Huth on 11.03.24.
+//  Created by Sarah Huth on 11.04.24.
 //
 
 import SwiftUI
 
-struct InterestsView: View {
+struct WriteView: View {
     var body: some View {
         NavigationStack{
             
@@ -17,7 +17,7 @@ struct InterestsView: View {
                     .resizable()
                 
                 
-                Text("Interessen")
+                Text("Schreib")
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .fontWeight(.thin)
                     .foregroundColor(.white)
@@ -34,5 +34,5 @@ struct InterestsView: View {
 }
 
 #Preview {
-    InterestsView()
+    WriteView()
 }

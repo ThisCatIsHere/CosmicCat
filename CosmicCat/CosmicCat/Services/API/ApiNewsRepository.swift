@@ -21,7 +21,7 @@ class ApiNewsRepository {
         
         // Erstellung der URL mit dem übergebenen Suchtext und dem API-Schlüssel.
         // Falls die URL nicht korrekt erstellt werden kann, wird ein `InvalidURLError` geworfen.
-        guard let url = URL(string:"https://newsapi.org/v2/everything?q=gaming&sortBy=publishedAt&apiKey=\(APIKey)") else {
+        guard let url = URL(string:"https://newsapi.org/v2/everything?q=gaming&sortBy=publishedAt&language=de&apiKey=\(APIKey)") else {
             
             
            

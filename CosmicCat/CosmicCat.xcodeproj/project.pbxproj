@@ -19,6 +19,7 @@
 		B2BDF3F22BB3655F00383444 /* ReadingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BDF3F12BB3655F00383444 /* ReadingListViewModel.swift */; };
 		B2BDF3F52BB3674C00383444 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BDF3F42BB3674C00383444 /* Extensions.swift */; };
 		B2BDF3F72BB3679200383444 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BDF3F62BB3679200383444 /* CardView.swift */; };
+		B2BDF3F92BC879CF00383444 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BDF3F82BC879CF00383444 /* WriteView.swift */; };
 		B2C4D15F2B9DFE6800AE7DBF /* FireBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C4D15E2B9DFE6800AE7DBF /* FireBaseManager.swift */; };
 		B2C4D1612B9DFF3900AE7DBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2C4D1602B9DFF3900AE7DBF /* GoogleService-Info.plist */; };
 		B2C4D1642B9E001600AE7DBF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B2C4D1632B9E001600AE7DBF /* FirebaseAnalytics */; };
@@ -60,7 +61,6 @@
 		B2FEE77F2B9F80A7009EA0E3 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE77E2B9F80A7009EA0E3 /* TextButton.swift */; };
 		B2FEE7852B9F8417009EA0E3 /* ReadingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE7842B9F8417009EA0E3 /* ReadingListView.swift */; };
 		B2FEE78B2B9F848B009EA0E3 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE78A2B9F848B009EA0E3 /* ProfileView.swift */; };
-		B2FEE7912B9F84DA009EA0E3 /* InterestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE7902B9F84DA009EA0E3 /* InterestsView.swift */; };
 		B2FEE7932BA0D61D009EA0E3 /* GameFeedNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE7922BA0D61D009EA0E3 /* GameFeedNews.swift */; };
 		B2FEE7952BA0E2E5009EA0E3 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE7942BA0E2E5009EA0E3 /* FeedViewModel.swift */; };
 		B2FEE79B2BA0E813009EA0E3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FEE79A2BA0E813009EA0E3 /* DetailView.swift */; };
@@ -85,6 +85,7 @@
 		B2BDF3F12BB3655F00383444 /* ReadingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListViewModel.swift; sourceTree = "<group>"; };
 		B2BDF3F42BB3674C00383444 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B2BDF3F62BB3679200383444 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		B2BDF3F82BC879CF00383444 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		B2C4D15E2B9DFE6800AE7DBF /* FireBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseManager.swift; sourceTree = "<group>"; };
 		B2C4D1602B9DFF3900AE7DBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B2C4D19D2B9E03C300AE7DBF /* FeedsOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsOverview.swift; sourceTree = "<group>"; };
@@ -99,7 +100,6 @@
 		B2FEE77E2B9F80A7009EA0E3 /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		B2FEE7842B9F8417009EA0E3 /* ReadingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListView.swift; sourceTree = "<group>"; };
 		B2FEE78A2B9F848B009EA0E3 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		B2FEE7902B9F84DA009EA0E3 /* InterestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsView.swift; sourceTree = "<group>"; };
 		B2FEE7922BA0D61D009EA0E3 /* GameFeedNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFeedNews.swift; sourceTree = "<group>"; };
 		B2FEE7942BA0E2E5009EA0E3 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		B2FEE79A2BA0E813009EA0E3 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -221,7 +221,7 @@
 				B2C4D1992B9E037200AE7DBF /* Feeds */,
 				B2FEE7802B9F83CE009EA0E3 /* Readinglist */,
 				B2FEE7862B9F8468009EA0E3 /* Profile */,
-				B2FEE78C2B9F84A9009EA0E3 /* Interests */,
+				B2FEE78C2B9F84A9009EA0E3 /* Write */,
 				B2C4D1562B9DF98600AE7DBF /* Authentication */,
 			);
 			path = Features;
@@ -436,14 +436,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		B2FEE78C2B9F84A9009EA0E3 /* Interests */ = {
+		B2FEE78C2B9F84A9009EA0E3 /* Write */ = {
 			isa = PBXGroup;
 			children = (
 				B2FEE78F2B9F84C5009EA0E3 /* Model */,
 				B2FEE78E2B9F84BC009EA0E3 /* View */,
 				B2FEE78D2B9F84B2009EA0E3 /* ViewModel */,
 			);
-			path = Interests;
+			path = Write;
 			sourceTree = "<group>";
 		};
 		B2FEE78D2B9F84B2009EA0E3 /* ViewModel */ = {
@@ -456,7 +456,7 @@
 		B2FEE78E2B9F84BC009EA0E3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B2FEE7902B9F84DA009EA0E3 /* InterestsView.swift */,
+				B2BDF3F82BC879CF00383444 /* WriteView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -617,6 +617,7 @@
 			files = (
 				B2FEE7952BA0E2E5009EA0E3 /* FeedViewModel.swift in Sources */,
 				B2FEE7AC2BA4EBA5009EA0E3 /* ApiNewsRepository.swift in Sources */,
+				B2BDF3F92BC879CF00383444 /* WriteView.swift in Sources */,
 				B2BDF3F22BB3655F00383444 /* ReadingListViewModel.swift in Sources */,
 				B2FEE7702B9F7B9A009EA0E3 /* AuthenticationViewModel.swift in Sources */,
 				B2BDF3F72BB3679200383444 /* CardView.swift in Sources */,
@@ -625,7 +626,6 @@
 				B2FEE77F2B9F80A7009EA0E3 /* TextButton.swift in Sources */,
 				B2BDF3F52BB3674C00383444 /* Extensions.swift in Sources */,
 				B26EB17A2B9116230043DA38 /* HomeView.swift in Sources */,
-				B2FEE7912B9F84DA009EA0E3 /* InterestsView.swift in Sources */,
 				B2BDF3F02BB34F2100383444 /* ReadingListItemView.swift in Sources */,
 				B2FEE7852B9F8417009EA0E3 /* ReadingListView.swift in Sources */,
 				B2FEE7A42BA37970009EA0E3 /* WebView.swift in Sources */,

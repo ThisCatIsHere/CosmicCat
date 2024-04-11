@@ -19,9 +19,14 @@ struct ReadingListView: View {
                 VStack{
                     ScrollView {
                         ForEach(viewModel.articles, id: \.id) { article in
-                            CardView(showBlur: true, title: article.title, description: article.description)
-                                .padding(.vertical, 4)
-//                                .swipeActions(content: <#T##() -> View#>)
+                            NavigationLink(destination: DetailView(article: article.toArticle())) {
+                                CardView(showBlur: true, title: article.title, description: article.description)
+                                    .padding(.vertical, 4)
+//                                    .swipeActions(content: <#T##() -> View#>)
+                            }
+                            
+                    
+//
                         }
                     }
                     .padding(.horizontal, 20)
