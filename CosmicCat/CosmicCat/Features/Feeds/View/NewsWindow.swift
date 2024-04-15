@@ -28,24 +28,24 @@ struct NewsWindow: View {
                     VStack{
                         
                         
-                        HStack{
-                            Spacer()
-                            Button(action: {
-                                isLiked.toggle()
-                                if isLiked {
-                                    viewModel.saveArticle(article.toFireNewsFeed())
-                                    
-                                }
-                                
-                            }) {
-                                Image(systemName: isLiked ? "heart.fill" : "heart" )
-                                    .resizable()
-                                    .frame(width: 30, height: 30)
-                                    .foregroundColor(isLiked ? .white :  .white)
-                            }
-                        }
-                        .padding()
-                        .frame(width: 300, height: 60)
+//                        HStack{
+//                            Spacer()
+//                            Button(action: {
+//                                isLiked.toggle()
+//                                if isLiked {
+//                                    viewModel.saveArticle(article.toFireNewsFeed())
+//                                    
+//                                }
+//                                
+//                            }) {
+//                                Image(systemName: isLiked ? "heart.fill" : "heart" )
+//                                    .resizable()
+//                                    .frame(width: 30, height: 30)
+//                                    .foregroundColor(isLiked ? .white :  .white)
+//                            }
+//                        }
+//                        .padding()
+//                        .frame(width: 300, height: 60)
                         
                         
                         Spacer()
@@ -59,7 +59,7 @@ struct NewsWindow: View {
                         } placeholder: {
                             Image(.cosmicCatTransparent)
                                 .resizable()
-                                .scaledToFit()
+                                .scaledToFill()
                             ProgressView()
                         }
                     }

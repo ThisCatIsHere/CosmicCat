@@ -7,11 +7,16 @@
 import SwiftUI
 
 struct LoveItButton: View {
+    let article: Article
+    
     @Binding var isFavorite: Bool
 
+    @EnvironmentObject var viewModel: NewsFeedListViewModel
+    
     var body: some View {
         Button(action: {
             self.isFavorite.toggle()
+            viewModel.saveArticle(article.toFireNewsFeed())
         }) {
             ZStack {
                 Circle()
@@ -29,10 +34,10 @@ struct LoveItButton: View {
     }
 }
 
-struct LoveItButton_Previews: PreviewProvider {
-    static var previews: some View {
-        LoveItButton(isFavorite: .constant(false))
-    }
-}
+//struct LoveItButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoveItButton(article: <#Article#>, isFavorite: .constant(false))
+//    }
+//}
 
 

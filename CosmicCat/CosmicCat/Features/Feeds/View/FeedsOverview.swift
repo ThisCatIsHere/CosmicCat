@@ -36,7 +36,6 @@ struct FeedsOverview: View {
                     }
                     .onAppear(perform: viewModel.load)
                     .frame(maxWidth: .infinity)
-                    
                 }
                 Spacer()
             }

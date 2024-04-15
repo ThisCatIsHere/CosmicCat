@@ -20,8 +20,8 @@ class NewsFeedListViewModel: ObservableObject {
     var viewModel = AuthenticationViewModel()
     
     func saveArticle(_ article: FireNewsFeed) {
-        let db = Firestore.firestore()
-        guard let userId = viewModel.user?.id else {
+        let db = FireBaseManager.shared.firestore
+        guard let userId = FireBaseManager.shared.userId else {
             print("Error: Artikel hat keine userId.")
             return
         }

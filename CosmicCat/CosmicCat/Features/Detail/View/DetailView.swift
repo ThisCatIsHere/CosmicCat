@@ -150,7 +150,7 @@ struct DetailView: View {
                                    )
                                }
 
-                               LoveItButton(isFavorite: $isFavorite)
+                LoveItButton(article: article, isFavorite: $isFavorite)
                                    .frame(width: 44, height: 44)
                                    .background(Circle().fill(Color.white).shadow(radius: 4))
                                    .offset(x: 150, y: 275)

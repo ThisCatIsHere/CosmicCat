@@ -36,12 +36,12 @@ struct HomeView: View {
                     }
                     .tag(TabViewItem.favorites)
                 
-                ProfileView()
-                    .tabItem {
-                        Image(systemName: "person")
-                        Text(TabViewItem.profile.rawValue)
-                    }
-                    .tag(TabViewItem.profile)
+//                ProfileView()
+//                    .tabItem {
+//                        Image(systemName: "person")
+//                        Text(TabViewItem.profile.rawValue)
+//                    }
+//                    .tag(TabViewItem.profile)
                 
                 WriteView()
                     .tabItem {

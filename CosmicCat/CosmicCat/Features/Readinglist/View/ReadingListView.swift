@@ -1,7 +1,3 @@
-
-//  Created by Sarah Huth on 11.03.24.
-
-
 import SwiftUI
 
 struct ReadingListView: View {
@@ -13,37 +9,43 @@ struct ReadingListView: View {
     }
     
     var body: some View {
-        NavigationStack{
-            ZStack(){
+        NavigationStack {
+            ZStack {
                 background
-                VStack{
-                    ScrollView {
+                VStack {
+                    List {
                         ForEach(viewModel.articles, id: \.id) { article in
                             NavigationLink(destination: DetailView(article: article.toArticle())) {
                                 CardView(showBlur: true, title: article.title, description: article.description)
                                     .padding(.vertical, 4)
-//                                    .swipeActions(content: <#T##() -> View#>)
+
+                                
                             }
-                            
-                    
-//
+                            .swipeActions {
+                                Button(role: .destructive) {
+                                    viewModel.deleteArticle(article)
+                                } label: {
+                                    Label("Löschen", systemImage: "trash")
+                                }
+                            }
+
                         }
                     }
+                    
                     .padding(.horizontal, 20)
                     .frame(maxWidth: .infinity, maxHeight: 650)
-                    .background(.clear)
+                    .scrollContentBackground(.hidden)
                     .navigationTitle("Leseliste")
                     .navigationBarTitleDisplayMode(.inline)
-                    .onAppear{
+                    .onAppear {
                         viewModel.loadFavorits()
                     }
                 }
             }
         }
+        
     }
-}
 
-extension ReadingListView {
     var background: some View {
         GeometryReader { geo in
             Image("background")

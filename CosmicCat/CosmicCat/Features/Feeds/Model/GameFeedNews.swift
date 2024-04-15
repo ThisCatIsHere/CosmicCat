@@ -39,7 +39,7 @@ struct Article: Codable, Identifiable {
     func toFireNewsFeed() -> FireNewsFeed {
         
                 
-        return FireNewsFeed(author: author ?? "Author not found", title: title ?? "Title not found", description: description ?? "Description not found", urlToImage: urlToImage! )
+        return FireNewsFeed(author: author ?? "Author not found", title: title ?? "Title not found", description: description ?? "Description not found", urlToImage: urlToImage ?? URL(string:"https://firebasestorage.googleapis.com/v0/b/cosmiccat-95cc6.appspot.com/o/CosmicCatTransparent.png?alt=media&token=ebb33f91-dca9-42ce-84b4-79aa6bdfeb7c") )
     }
 }
 

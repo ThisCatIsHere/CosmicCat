@@ -36,7 +36,7 @@ struct PrimaryButton: View {
     }
     
     
-    
+
     let title: String
     let action: () -> Void
 }
