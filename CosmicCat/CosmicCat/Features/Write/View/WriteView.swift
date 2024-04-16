@@ -1,25 +1,10 @@
 import SwiftUI
 
-// Eine UIViewRepresentable Struktur, um die Darstellung des UITextView zu beeinflussen
-struct TransparentTextEditor: UIViewRepresentable {
-    @Binding var text: String
-    
-    func makeUIView(context: Context) -> UITextView {
-        let textView = UITextView()
-        textView.backgroundColor = UIColor.clear
-        textView.textColor = UIColor.white
-        textView.font = UIFont.systemFont(ofSize: 18)
-        textView.text = text
-        return textView
-    }
-    
-    func updateUIView(_ uiView: UITextView, context: Context) {
-        uiView.text = text
-    }
-}
+
 struct WriteView: View {
-    @State private var title: String = ""
-    @State private var description: String = ""
+    //    @State private var title: String = ""
+    //    @State private var description: String = ""
+    @StateObject private var viewModel = WriteViewModel()
     
     init() {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
@@ -31,7 +16,7 @@ struct WriteView: View {
                 background
                 ScrollView {
                     VStack(spacing: 20) {
-                        TextField("", text: $title)
+                        TextField("", text: $viewModel.article.title)
                             .padding()
                             .background(Color.black.opacity(0.5))
                             .foregroundColor(.white)
@@ -40,9 +25,12 @@ struct WriteView: View {
                                 RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.tuerkis, lineWidth: 1)  // Türkiser Stroke
                             )
-                        TransparentTextEditor(text: $description)
+                        TextEditor(text: $viewModel.article.description)
+                        
                             .frame(minHeight: 200)
                             .padding()
+                            .foregroundColor(.white)
+                            .scrollContentBackground(.hidden)
                             .background(Color.black.opacity(0.5))
                             .cornerRadius(5)
                             .overlay(
@@ -51,7 +39,8 @@ struct WriteView: View {
                             )
                         
                         Button("Artikel speichern") {
-                            saveArticle(title: title, description: description)
+//                            print(viewModel.article)
+                            viewModel.saveArticle()
                         }
                         .frame(maxWidth: .infinity)
                         .padding()
@@ -73,9 +62,7 @@ struct WriteView: View {
         }
     }
     
-    func saveArticle(title: String, description: String) {
-        print("Artikel gespeichert: \(title) - \(description)")
-    }
+    
     
     var background: some View {
         GeometryReader { geo in

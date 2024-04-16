@@ -32,3 +32,5 @@ extension FireNewsFeed {
         return dict
     }
 }
+
+let placeholderImage = URL(string: "https://firebasestorage.googleapis.com/v0/b/cosmiccat-95cc6.appspot.com/o/CosmicCatTransparent.png?alt=media&token=ebb33f91-dca9-42ce-84b4-79aa6bdfeb7c" )

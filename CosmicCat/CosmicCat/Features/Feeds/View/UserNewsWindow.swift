@@ -1,25 +1,22 @@
 //
-//  NewsWindow.swift
+//  UserNewsWindow.swift
 //  CosmicCat
 //
-//  Created by Sarah Huth on 13.03.24.
+//  Created by Sarah Huth on 16.04.24.
 //
 
 import SwiftUI
-import FirebaseFirestore
 
-
-struct NewsWindow: View {
+struct UserNewsWindow: View {
     
     var imageName : URL? = nil
     var title = ""
     var description = ""
     
     @State var isLiked = false
-    let article: Article
+    let article: PublishedArticle
     
     @EnvironmentObject var viewModel: NewsFeedListViewModel
-    
     
     var body: some View {
         NavigationStack{
@@ -47,20 +44,20 @@ struct NewsWindow: View {
                 
                 VStack{
                     
-                    Text(article.title ?? "No title found")
+                    Text(article.title)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .padding()
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .background(Color.black.opacity(0.3))
-                        
+                    
                     Spacer()
                     
                 }
                 .frame(maxWidth: .infinity, maxHeight: 150)
                 .background(Color.white.opacity(0.5))
                 .foregroundColor(.black)
-                                        
+                
             }
             .frame(width: 300, height: 350)
             .background(Color.black.opacity(0.3))
@@ -75,4 +72,5 @@ struct NewsWindow: View {
         }
     }
 }
+
 

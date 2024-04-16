@@ -11,7 +11,7 @@ import FirebaseFirestoreSwift
 
 class ReadingListViewModel: ObservableObject, Identifiable {
     
-   
+    
     
     private var listener: ListenerRegistration?
     
@@ -35,7 +35,7 @@ class ReadingListViewModel: ObservableObject, Identifiable {
                     try? queryDocumentSnapshot.data(as: FireNewsFeed.self)
                 }
             }
-       } //Ende loadFavorits
+    } //Ende loadFavorits
     
     func removeListener() {
         articles.removeAll()
@@ -51,7 +51,7 @@ class ReadingListViewModel: ObservableObject, Identifiable {
                 print("Fehler beim Löschen des Artikels: \(error.localizedDescription)")
             } else {
                 print("Artikel erfolgreich gelöscht")
-                self.loadFavorits()  
+                self.loadFavorits()
             }
         }
     }

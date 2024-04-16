@@ -159,14 +159,8 @@ struct DetailView: View {
                            }
                        }
                        .edgesIgnoringSafeArea(.top)
-//
                        .navigationBarTitle(Text("Detail"), displayMode: .inline)
-//                       .navigationBarItems(leading: Button(action: {}) {
-//                           Image(systemName: "chevron.left")
-//                       }, trailing: Button(action: {}) {
-//                           Image(systemName: "ellipsis.circle")
-//                       })
-//                       .navigationBarBackButtonHidden(true)
+
                    }
                }
 

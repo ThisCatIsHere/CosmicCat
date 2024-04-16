@@ -28,7 +28,7 @@ struct FeedsOverview: View {
                         HStack() {
                             ForEach(viewModel.feedItems) { item in
                                 NavigationLink(destination: DetailView(article: item)) {
-                                    FeedItemView(feedItem: item)
+                                    NewsWindow(imageName: item.urlToImage,title: item.title ?? "empty title", description: item.description ?? "empty description", article: item)
                                 }
                             }
                         }
@@ -36,8 +36,26 @@ struct FeedsOverview: View {
                     }
                     .onAppear(perform: viewModel.load)
                     .frame(maxWidth: .infinity)
+                    
+                    Spacer()
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack() {
+                            ForEach(viewModel.userFeedItems) { item in
+                                NavigationLink(destination: UserFeedsDetailView(article: item)) {
+                                    UserNewsWindow(article: item)
+
+                                }
+                            }
+                        }
+                        .padding()
+                    }
+                    .onAppear{
+                        viewModel.loadUserFeeds()
+                    }
+                    .frame(maxWidth: .infinity)
                 }
-                Spacer()
+                
             }
             .navigationTitle("Deine Game News")
             .navigationBarTitleDisplayMode(.inline)

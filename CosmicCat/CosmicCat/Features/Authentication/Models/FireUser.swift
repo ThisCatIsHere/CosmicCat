@@ -12,4 +12,12 @@ struct FireUser: Codable {
     var name: String
     var email: String
     var registeredAt: Date
+    var publishedArticle: [PublishedArticle]
+}
+struct PublishedArticle: Codable, Identifiable {
+    var id: UUID
+    var title: String
+    var author: String
+    var description: String
+    var urlToImage: URL? = placeholderImage!
 }

@@ -124,7 +124,7 @@ extension AuthenticationViewModel {
      In der Collection 'users' wird unter der jeweiligen ID des Users ein Dokument erstellt. Dazu kann das Objekt übergeben werden.
      */
     private func createUser(with id: String, name: String, email: String) {
-        let user = FireUser(id: id, name: name, email: email, registeredAt: Date())
+        let user = FireUser(id: id, name: name, email: email, registeredAt: Date(), publishedArticle: [])
         
         do {
             try firebaseManager.firestore.collection("users").document(id).setData(from: user)
