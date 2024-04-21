@@ -42,12 +42,9 @@ class FeedViewModel: ObservableObject {
                     print("Fehler beim Laden der Artikel")
                     return
                 }
-                 let newsFeeds = documents.compactMap { document in
-                    try? document.data(as: PublishedArticle.self)
-                }
-                
-                DispatchQueue.main.async {
-                    self.userFeedItems.append(contentsOf: newsFeeds)
+                self.userFeedItems = documents.compactMap { queryDocumentSnapshot -> PublishedArticle? in
+                    print(queryDocumentSnapshot.data())
+                   return try? queryDocumentSnapshot.data(as: PublishedArticle.self)
                 }
                 print("Liste aus dem FeedViewModel\(self.userFeedItems)")
             }

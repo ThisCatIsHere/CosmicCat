@@ -59,7 +59,7 @@ struct UserNewsWindow: View {
                 .foregroundColor(.black)
                 
             }
-            .frame(width: 300, height: 350)
+            .frame(width: 250, height: 150)
             .background(Color.black.opacity(0.3))
             .clipShape(
                 .rect(

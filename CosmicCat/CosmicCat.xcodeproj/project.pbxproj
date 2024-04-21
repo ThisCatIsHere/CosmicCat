@@ -373,7 +373,6 @@
 			isa = PBXGroup;
 			children = (
 				B2BDF3F32BB3672700383444 /* Extension */,
-				B2FEE7832B9F83FC009EA0E3 /* Model */,
 				B2FEE7822B9F83F5009EA0E3 /* View */,
 				B2FEE7812B9F83E9009EA0E3 /* ViewModel */,
 			);
@@ -398,17 +397,9 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		B2FEE7832B9F83FC009EA0E3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		B2FEE78C2B9F84A9009EA0E3 /* Write */ = {
 			isa = PBXGroup;
 			children = (
-				B2FEE78F2B9F84C5009EA0E3 /* Model */,
 				B2FEE78E2B9F84BC009EA0E3 /* View */,
 				B2FEE78D2B9F84B2009EA0E3 /* ViewModel */,
 			);
@@ -429,13 +420,6 @@
 				B2BDF3F82BC879CF00383444 /* WriteView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		B2FEE78F2B9F84C5009EA0E3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		B2FEE7962BA0E7D2009EA0E3 /* Detail */ = {

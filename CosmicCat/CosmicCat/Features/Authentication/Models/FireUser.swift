@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseFirestoreSwift
 
 struct FireUser: Codable {
     var id: String
@@ -15,7 +16,7 @@ struct FireUser: Codable {
     var publishedArticle: [PublishedArticle]
 }
 struct PublishedArticle: Codable, Identifiable {
-    var id: UUID
+    @DocumentID var id: String?
     var title: String
     var author: String
     var description: String

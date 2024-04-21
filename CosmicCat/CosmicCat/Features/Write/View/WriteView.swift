@@ -16,15 +16,25 @@ struct WriteView: View {
                 background
                 ScrollView {
                     VStack(spacing: 20) {
-                        TextField("", text: $viewModel.article.title)
-                            .padding()
-                            .background(Color.black.opacity(0.5))
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.tuerkis, lineWidth: 1)  // Türkiser Stroke
-                            )
+                        ZStack(alignment: .leading) {
+                            if viewModel.article.title.isEmpty {
+                                Text("Titel...")
+                                    .padding(.horizontal, 20)
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 20))
+                            }
+                            TextField("", text: $viewModel.article.title)
+                                .font(.system(size: 25))
+                                .padding()
+                                .background(Color.black.opacity(0.5))
+                                .foregroundColor(.white)
+                                .accentColor(.white)
+                                .cornerRadius(10)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.tuerkis, lineWidth: 1)  // Türkiser Stroke
+                                )
+                        }
                         TextEditor(text: $viewModel.article.description)
                         
                             .frame(minHeight: 200)
@@ -39,7 +49,7 @@ struct WriteView: View {
                             )
                         
                         Button("Artikel speichern") {
-//                            print(viewModel.article)
+                            //                            print(viewModel.article)
                             viewModel.saveArticle()
                         }
                         .frame(maxWidth: .infinity)

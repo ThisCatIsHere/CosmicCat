@@ -27,57 +27,11 @@ class WriteViewModel: ObservableObject {
             print("Error adding article: \(error)")
         }
     }
-    
-//    func saveArticle() {
-//        guard let currentUserID = Auth.auth().currentUser?.uid else {
-//            print("Error: No current user")
-//            return
-//        }
-//        
-//        let newArticle = PublishedArticle(id: UUID(), title: self.article.title, description: self.article.description)
-//        
-//        let userDocumentRef = Firestore.firestore().collection("users").document(currentUserID)
-//        userDocumentRef.getDocument { [weak self] (document, error) in
-//            guard let self = self else { return }
-//            if let error = error {
-//                print("Error getting user document: \(error.localizedDescription)")
-//                return
-//            }
-//            if let document = document, document.exists {
-//                userDocumentRef.updateData(["publishedArticle": FieldValue.arrayUnion([newArticle.asDictionary])]) { error in
-//                    if let error = error {
-//                        print("Error updating document: \(error)")
-//                    } else {
-//                        print("\(self.article.description)")
-//                        print("\(self.article.title)")
-//
-//                        print("Artikel gespeichert")
-//                        self.article.title = ""
-//                        self.article.description = ""
-//                        
-//                    }
-//                }
-//            } else {
-//                userDocumentRef.setData(["publishedArticle": [newArticle.asDictionary]]) { error in
-//                    if let error = error {
-//                        print("Error adding document: \(error)")
-//                    } else {
-//                        print("\(self.article.description)")
-//                        print("\(self.article.title)")
-//                        print("Artikel gespeichert")
-//                        self.article.title = ""
-//                        self.article.description = ""
-//                        
-//                    }
-//                }
-//            }
-//        }
-//    }
 }
 extension PublishedArticle {
     var asDictionary: [String: Any] {
         return [
-            "id": id.uuidString,
+            "id": id,
             "title": title,
             "description": description
         ]

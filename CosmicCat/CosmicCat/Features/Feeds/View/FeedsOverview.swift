@@ -39,8 +39,15 @@ struct FeedsOverview: View {
                     
                     Spacer()
                     
+                    Text("Game News Artikel von \n anderen Usern geschrieben")
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding(.horizontal)
+                        
+                    
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack() {
+                            
                             ForEach(viewModel.userFeedItems) { item in
                                 NavigationLink(destination: UserFeedsDetailView(article: item)) {
                                     UserNewsWindow(article: item)
@@ -50,10 +57,11 @@ struct FeedsOverview: View {
                         }
                         .padding()
                     }
-                    .onAppear{
-                        viewModel.loadUserFeeds()
-                    }
+                   
                     .frame(maxWidth: .infinity)
+                }
+                .onAppear{
+                    viewModel.loadUserFeeds()
                 }
                 
             }
