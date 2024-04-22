@@ -40,7 +40,7 @@ struct UserNewsWindow: View {
                     }
                 }
                 .frame(maxWidth: .infinity, maxHeight: 200)
-                .background(.black)
+                .background(.petrol)
                 
                 VStack{
                     
@@ -59,7 +59,7 @@ struct UserNewsWindow: View {
                 .foregroundColor(.black)
                 
             }
-            .frame(width: 250, height: 150)
+            .frame(width: 250, height: 200)
             .background(Color.black.opacity(0.3))
             .clipShape(
                 .rect(

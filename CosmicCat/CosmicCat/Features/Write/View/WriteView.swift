@@ -5,6 +5,7 @@ struct WriteView: View {
     //    @State private var title: String = ""
     //    @State private var description: String = ""
     @StateObject private var viewModel = WriteViewModel()
+    @StateObject var authViewModel = AuthenticationViewModel()
     
     init() {
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
@@ -50,6 +51,8 @@ struct WriteView: View {
                         
                         Button("Artikel speichern") {
                             //                            print(viewModel.article)
+                            
+                            viewModel.article.author = authViewModel.user!.name
                             viewModel.saveArticle()
                         }
                         .frame(maxWidth: .infinity)

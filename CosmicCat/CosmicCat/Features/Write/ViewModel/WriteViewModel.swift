@@ -10,6 +10,8 @@ import Firebase
 
 class WriteViewModel: ObservableObject {
     
+    
+    
     @Published var article: FireNewsFeed = FireNewsFeed(author: "", title: "", description: "", urlToImage: placeholderImage)
     
     func saveArticle() {

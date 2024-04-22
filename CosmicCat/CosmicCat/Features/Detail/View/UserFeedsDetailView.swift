@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct UserFeedsDetailView: View {
+    
+    var imageName : URL? = nil
     let article: PublishedArticle
     @State private var isFavorite: Bool = false
     
@@ -26,17 +28,13 @@ struct UserFeedsDetailView: View {
                                     .foregroundColor(.secondary)
                                 
                                 Spacer()
-                                
-//                                Text("12 hours ago")
-//                                    .font(.subheadline)
-//                                    .foregroundColor(.secondary)
+                    
                             }
                             .padding([.horizontal, .top])
                             
                             Text(article.description)
                             
                                 .padding()
-                            
                         }
                     }
                     // Sorgt dafür, dass der Text auf weißem Hintergrund scrollt
@@ -44,11 +42,14 @@ struct UserFeedsDetailView: View {
                 }
                 .edgesIgnoringSafeArea(.top)
                 
-                if let imageUrl = article.urlToImage{
-                    AsyncImage(url: imageUrl) { image in
+                
+                    AsyncImage(url: imageName) { image in
                         image.resizable()
                         image.scaledToFit()
                     } placeholder: {
+                        Image(.cosmiccatlogo)
+                            .resizable()
+                            .scaledToFill()
                         ProgressView()
                     }
                     .frame(width: geometry.size.width, height: 300)
@@ -67,20 +68,10 @@ struct UserFeedsDetailView: View {
                         alignment: .bottomLeading
                     )
                 }
-                
-//                LoveItButton(article: article, isFavorite: $isFavorite)
-//                    .frame(width: 44, height: 44)
-//                    .background(Circle().fill(Color.white).shadow(radius: 4))
-//                    .offset(x: 150, y: 275)
-//                    .padding(.trailing)
-//                    .zIndex(2)
             }
         }
-        .edgesIgnoringSafeArea(.top)
-        .navigationBarTitle(Text("Detail"), displayMode: .inline)
-        
     }
-}
+
 
 
 
