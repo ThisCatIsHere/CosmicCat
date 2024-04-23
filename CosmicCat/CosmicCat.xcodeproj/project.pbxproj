@@ -320,6 +320,7 @@
 		B2C4D19A2B9E038F00AE7DBF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B2BDF3F32BB3672700383444 /* Extension */,
 				B2FEE7942BA0E2E5009EA0E3 /* FeedViewModel.swift */,
 			);
 			path = ViewModel;
@@ -372,7 +373,6 @@
 		B2FEE7802B9F83CE009EA0E3 /* Readinglist */ = {
 			isa = PBXGroup;
 			children = (
-				B2BDF3F32BB3672700383444 /* Extension */,
 				B2FEE7822B9F83F5009EA0E3 /* View */,
 				B2FEE7812B9F83E9009EA0E3 /* ViewModel */,
 			);

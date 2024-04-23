@@ -49,7 +49,7 @@ struct WriteView: View {
                                     .stroke(Color.tuerkis, lineWidth: 1)
                             )
                         
-                        Button("Artikel speichern") {
+                        Button("Jetzt veröffentlichen") {
                             //                            print(viewModel.article)
                             
                             viewModel.article.author = authViewModel.user!.name
@@ -72,26 +72,28 @@ struct WriteView: View {
                 .navigationTitle("Artikel erstellen")
                 .navigationBarTitleDisplayMode(.inline)
             }
+         }
+        .alert(isPresented: $viewModel.showAlert) {
+            Alert(title: Text("Ihr Artikel wurde veröffentlicht!"), message: Text(viewModel.alertMessage), dismissButton: .default(Text("OK")))
+        }
+    }
+        
+        
+        var background: some View {
+            GeometryReader { geo in
+                Image("background")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: geo.size.width, height: geo.size.height)
+            }
+            .ignoresSafeArea()
         }
     }
     
-    
-    
-    var background: some View {
-        GeometryReader { geo in
-            Image("background")
-                .resizable()
-                .scaledToFill()
-                .frame(width: geo.size.width, height: geo.size.height)
+    struct WriteView_Previews: PreviewProvider {
+        static var previews: some View {
+            WriteView()
         }
-        .ignoresSafeArea()
     }
-}
-
-struct WriteView_Previews: PreviewProvider {
-    static var previews: some View {
-        WriteView()
-    }
-}
 
 

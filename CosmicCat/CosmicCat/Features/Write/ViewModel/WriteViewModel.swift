@@ -1,35 +1,37 @@
-//
-//  WriteViewModel.swift
-//  CosmicCat
-//
-//  Created by Sarah Huth on 16.04.24.
-//
-
 import Foundation
 import Firebase
 
 class WriteViewModel: ObservableObject {
-    
-    
-    
     @Published var article: FireNewsFeed = FireNewsFeed(author: "", title: "", description: "", urlToImage: placeholderImage)
-    
+    @Published var showAlert = false
+    @Published var alertMessage = ""
+
     func saveArticle() {
-        guard let userId = FireBaseManager.shared.userId else {
-            print("Error: Artikel hat keine userId.")
-            return
-        }
-//        let articleRef = FireBaseManager.shared.firestore.collection("users").document(userId).collection("publishedArticles").document()
         let articleRef = FireBaseManager.shared.firestore.collection("articles").document()
-        do { print(self.article)
-            try articleRef.setData(from: self.article)
-            print("Article successfully added with ID: \(articleRef.documentID)")
-            
+        do {
+            try articleRef.setData(from: self.article) { error in
+                DispatchQueue.main.async {
+                    if let error = error {
+                        self.alertMessage = "Fehler beim Hinzufügen des Artikels: \(error.localizedDescription)"
+                    } else {
+                        self.alertMessage = "Artikel erfolgreich veröffentlicht"
+                    }
+                    self.showAlert = true
+                    self.clearFields()
+                }
+            }
         } catch {
-            print("Error adding article: \(error)")
+            print("Error setting document: \(error)")
         }
     }
+    
+    func clearFields() {
+        article.title = ""
+        article.description = ""
+    }
 }
+
+
 extension PublishedArticle {
     var asDictionary: [String: Any] {
         return [
