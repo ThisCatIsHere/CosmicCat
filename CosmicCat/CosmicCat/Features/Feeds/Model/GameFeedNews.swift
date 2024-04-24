@@ -4,19 +4,7 @@
 //
 //  Created by Sarah Huth on 12.03.24.
 //
-
-//import Foundation
-//
-//struct FeedItem: Identifiable {
-//    let id = UUID()
-//    let title: String
-//    let imageName: String
-//    let category: String
-//    let description: String
-//}
-
 import Foundation
-
 
 // Diese Struktur implementiert das `Codable` Protokoll, um die Konvertierung zwischen JSON und dieser Struktur zu ermöglichen.
 struct FeedItem: Codable {
@@ -37,8 +25,6 @@ struct Article: Codable, Identifiable {
     let urlToImage: URL?       // Eine URL zu einem Bild, das den Artikel begleitet. Optional, da nicht alle Artikel Bilder haben.
     
     func toFireNewsFeed() -> FireNewsFeed {
-        
-                
         return FireNewsFeed(author: author ?? "Author not found", title: title ?? "Title not found", description: description ?? "Description not found", urlToImage: urlToImage ?? URL(string:"https://firebasestorage.googleapis.com/v0/b/cosmiccat-95cc6.appspot.com/o/CosmicCatTransparent.png?alt=media&token=ebb33f91-dca9-42ce-84b4-79aa6bdfeb7c") )
     }
 }

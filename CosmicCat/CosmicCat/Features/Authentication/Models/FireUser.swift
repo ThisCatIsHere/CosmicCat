@@ -8,17 +8,20 @@
 import Foundation
 import FirebaseFirestoreSwift
 
+// Definiert eine Struktur für Benutzerdaten in Firebase.
 struct FireUser: Codable {
-    var id: String
-    var name: String
-    var email: String
-    var registeredAt: Date
-    var publishedArticle: [PublishedArticle]
+    var id: String  // Eindeutige ID des Benutzers.
+    var name: String  // Name des Benutzers.
+    var email: String  // E-Mail-Adresse des Benutzers.
+    var registeredAt: Date  // Datum der Registrierung des Benutzers.
+    var publishedArticle: [PublishedArticle]  // Liste von Artikeln, die vom Benutzer veröffentlicht wurden.
 }
+
+// Definiert eine Struktur für einen veröffentlichten Artikel.
 struct PublishedArticle: Codable, Identifiable {
-    @DocumentID var id: String?
-    var title: String
-    var author: String
-    var description: String
-    var urlToImage: URL? = placeholderImage!
+    @DocumentID var id: String?  // Firestore-spezifisches Attribut, das als Dokument-ID dient, automatisch verwaltet.
+    var title: String  // Titel des Artikels.
+    var author: String  // Autor des Artikels.
+    var description: String  // Beschreibung des Artikels.
+    var urlToImage: URL? = placeholderImage  // URL zum Bild des Artikels, Standardwert ist ein Platzhalterbild.
 }

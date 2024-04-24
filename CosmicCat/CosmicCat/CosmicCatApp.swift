@@ -11,6 +11,7 @@ import Firebase
 @main
 struct CosmicCatApp: App {
     
+    // StateObject-Anmerkung sorgt dafür, dass diese ViewModels während des gesamten Lebenszyklus der App erhalten bleiben.
     @StateObject var authenticationViewModel = AuthenticationViewModel()
     @StateObject var newsFeedListViewModel = NewsFeedListViewModel()
     

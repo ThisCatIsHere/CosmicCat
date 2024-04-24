@@ -14,7 +14,6 @@
 		B26EB17F2B9116240043DA38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B26EB17E2B9116240043DA38 /* Preview Assets.xcassets */; };
 		B2AFE2BE2BADC528002CBA29 /* Sheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFE2BD2BADC528002CBA29 /* Sheet.swift */; };
 		B2AFE2C32BAE247B002CBA29 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AFE2C22BAE247B002CBA29 /* SettingsView.swift */; };
-		B2BDF3F02BB34F2100383444 /* ReadingListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BDF3EF2BB34F2100383444 /* ReadingListItemView.swift */; };
 		B2BDF3F22BB3655F00383444 /* ReadingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BDF3F12BB3655F00383444 /* ReadingListViewModel.swift */; };
 		B2BDF3F52BB3674C00383444 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BDF3F42BB3674C00383444 /* Extensions.swift */; };
 		B2BDF3F72BB3679200383444 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BDF3F62BB3679200383444 /* CardView.swift */; };
@@ -81,7 +80,6 @@
 		B26EB17E2B9116240043DA38 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B2AFE2BD2BADC528002CBA29 /* Sheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sheet.swift; sourceTree = "<group>"; };
 		B2AFE2C22BAE247B002CBA29 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		B2BDF3EF2BB34F2100383444 /* ReadingListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListItemView.swift; sourceTree = "<group>"; };
 		B2BDF3F12BB3655F00383444 /* ReadingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListViewModel.swift; sourceTree = "<group>"; };
 		B2BDF3F42BB3674C00383444 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B2BDF3F62BB3679200383444 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -309,7 +307,6 @@
 		B2C4D1992B9E037200AE7DBF /* Feeds */ = {
 			isa = PBXGroup;
 			children = (
-				B2FEE7742B9F7D2D009EA0E3 /* FireNewsFeed.swift */,
 				B2C4D19C2B9E03A900AE7DBF /* Model */,
 				B2C4D19B2B9E03A100AE7DBF /* View */,
 				B2C4D19A2B9E038F00AE7DBF /* ViewModel */,
@@ -339,6 +336,7 @@
 		B2C4D19C2B9E03A900AE7DBF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B2FEE7742B9F7D2D009EA0E3 /* FireNewsFeed.swift */,
 				B2FEE7922BA0D61D009EA0E3 /* GameFeedNews.swift */,
 			);
 			path = Model;
@@ -391,7 +389,6 @@
 			isa = PBXGroup;
 			children = (
 				B2FEE7842B9F8417009EA0E3 /* ReadingListView.swift */,
-				B2BDF3EF2BB34F2100383444 /* ReadingListItemView.swift */,
 				B2BDF3F62BB3679200383444 /* CardView.swift */,
 			);
 			path = View;
@@ -425,7 +422,6 @@
 		B2FEE7962BA0E7D2009EA0E3 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				B2FEE7992BA0E7EA009EA0E3 /* Model */,
 				B2FEE7982BA0E7E4009EA0E3 /* View */,
 			);
 			path = Detail;
@@ -439,13 +435,6 @@
 				B2D634B42BCEDEE300A4AA55 /* UserFeedsDetailView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		B2FEE7992BA0E7EA009EA0E3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		B2FEE7A02BA21D91009EA0E3 /* API */ = {
@@ -575,7 +564,6 @@
 				B2FEE77F2B9F80A7009EA0E3 /* TextButton.swift in Sources */,
 				B2BDF3F52BB3674C00383444 /* Extensions.swift in Sources */,
 				B26EB17A2B9116230043DA38 /* HomeView.swift in Sources */,
-				B2BDF3F02BB34F2100383444 /* ReadingListItemView.swift in Sources */,
 				B2FEE7852B9F8417009EA0E3 /* ReadingListView.swift in Sources */,
 				B2FEE7A42BA37970009EA0E3 /* WebView.swift in Sources */,
 				B26EB1782B9116230043DA38 /* CosmicCatApp.swift in Sources */,
